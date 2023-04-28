@@ -7,13 +7,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    var contries = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        title = "Contries"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        contries += ["Russia", "Spain", "Germany", "Estonia", "Korea", "US", "Monaco", "UAE"]
+        
     }
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contries.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableView", for: indexPath)
+        cell.textLabel?.text = contries[indexPath.row]
+        return cell
+    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 
 }
 
