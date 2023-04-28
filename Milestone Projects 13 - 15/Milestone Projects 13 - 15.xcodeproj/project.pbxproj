@@ -15,6 +15,7 @@
 		12866E4029FA92A600661CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12866E3E29FA92A600661CDD /* LaunchScreen.storyboard */; };
 		12866E5229FBD36100661CDD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12866E5129FBD36100661CDD /* Country.swift */; };
 		12866E5429FBD37B00661CDD /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 12866E5329FBD37B00661CDD /* countries.json */; };
+		12866E5629FBD6CB00661CDD /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12866E5529FBD6CB00661CDD /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		12866E4129FA92A600661CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12866E5129FBD36100661CDD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		12866E5329FBD37B00661CDD /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		12866E5529FBD6CB00661CDD /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				12866E3529FA92A500661CDD /* SceneDelegate.swift */,
 				12866E3729FA92A500661CDD /* ViewController.swift */,
 				12866E5129FBD36100661CDD /* Country.swift */,
+				12866E5529FBD6CB00661CDD /* Countries.swift */,
 				12866E3929FA92A500661CDD /* Main.storyboard */,
 				12866E3C29FA92A600661CDD /* Assets.xcassets */,
 				12866E3E29FA92A600661CDD /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				12866E3829FA92A500661CDD /* ViewController.swift in Sources */,
 				12866E3429FA92A500661CDD /* AppDelegate.swift in Sources */,
 				12866E3629FA92A500661CDD /* SceneDelegate.swift in Sources */,
+				12866E5629FBD6CB00661CDD /* Countries.swift in Sources */,
 				12866E5229FBD36100661CDD /* Country.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
