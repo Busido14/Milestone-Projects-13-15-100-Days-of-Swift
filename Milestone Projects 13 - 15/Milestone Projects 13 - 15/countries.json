@@ -1,0 +1,30 @@
+{
+    "results":[
+        {
+            "country":"USA",
+            "capital":"Washington D.C.",
+            "languages":"official":"English",
+            "area (sq km)":9834000,
+            "population":331900000,
+            "population increasing":true,
+            "currency":"United States Dollar"
+        },
+        {
+            "country":"France",
+            "capital":"Paris",
+            "languages":"official":"French",
+            "area (sq km)":551695,
+            "population":67750000,
+            "population increasing":true,
+            "currency":"Euro"
+        },
+ 	{
+            "country":"Russia",
+            "capital":"Moscow",
+            "languages":"official":"Russian",
+            "area (sq km)":17100000,
+            "population":143400000,
+            "currency":"Rub"
+        }
+    ]
+}
