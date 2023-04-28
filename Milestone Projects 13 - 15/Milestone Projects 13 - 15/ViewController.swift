@@ -16,7 +16,7 @@ class ViewController: UITableViewController {
         title = "Contries"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        contries += ["Russia", "Spain", "Germany", "Estonia", "Korea", "US", "Monaco", "UAE"]
+//        contries += ["Russia", "Spain", "Germany", "Estonia", "Korea", "US", "Monaco", "UAE"]
         
     }
     

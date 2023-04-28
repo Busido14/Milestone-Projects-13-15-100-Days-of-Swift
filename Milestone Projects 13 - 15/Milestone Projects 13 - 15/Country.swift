@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country {
+struct Country: Codable {
     var country: String
     var capital: String
     var languages: String
