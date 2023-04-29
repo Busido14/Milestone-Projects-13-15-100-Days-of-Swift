@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Countries: Codable {
-    var results: [Country]
+struct DataLoader: Codable {
+    var results: [CountryData]
 }

@@ -8,16 +8,37 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var contries = [String]()
-
+    var contries = [CountryData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Contries"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-//        contries += ["Russia", "Spain", "Germany", "Estonia", "Korea", "US", "Monaco", "UAE"]
+        if let data = load(filename: "countries") {
+            contries = data
+        } else {
+            print("Failed to load data.")
+        }
+        print(contries)
         
+    }
+    
+    func load(filename: String) -> [CountryData]? {
+        if let fileLocation = Bundle.main.url(forResource: "countries", withExtension: "json") {
+            
+            do {
+                let data = try Data(contentsOf: fileLocation)
+                let jsonDecoder = JSONDecoder()
+                let dataFromJson = try jsonDecoder.decode(DataLoader.self, from: data)
+                return dataFromJson.results
+                
+            } catch {
+                print(error)
+            }
+        }
+        return nil
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,12 +47,18 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableView", for: indexPath)
-        cell.textLabel?.text = contries[indexPath.row]
+        let country = contries[indexPath.row]
+        cell.textLabel?.text = country.country
         return cell
     }
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.detailItem = contries[indexPath.row]
+        vc.nameCountry = contries[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }
+
 
