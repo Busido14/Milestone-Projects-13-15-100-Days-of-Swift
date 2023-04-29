@@ -17,7 +17,7 @@ class DetailViewController: UITableViewController {
          
          title = nameCountry?.country
          navigationController?.navigationBar.prefersLargeTitles = false
-         
+         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(share))
          
      }
 
@@ -44,6 +44,22 @@ class DetailViewController: UITableViewController {
              cell.textLabel?.text = nil
          }
          return cell
+    }
+    
+    @objc func share() {
+        var areaShare: String?
+        var capitalShare: String?
+        if let area = detailItem?.area {
+            areaShare = "\(area)"
+        }
+        if let capital = detailItem?.capital {
+            capitalShare = "\(capital)"
+        }
+        let shares = [areaShare, capitalShare]
+        let vc = UIActivityViewController(activityItems: shares as [Any], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+        
     }
     
 }
