@@ -1,0 +1,28 @@
+{
+    "results":[
+        {
+            "country":"USA",
+            "capital":"Washington D.C.",
+            "languages":"English",
+            "area":9834000,
+            "population":331900000,
+            "currency":"United States Dollar"
+        },
+        {
+            "country":"France",
+            "capital":"Paris",
+            "languages":"French",
+            "area":551695,
+            "population":67750000,
+            "currency":"Euro"
+        },
+ 	{
+            "country":"Russia",
+            "capital":"Moscow",
+            "languages":"Russian",
+            "area":17100000,
+            "population":143400000,
+            "currency":"Rub"
+        }
+    ]
+}
